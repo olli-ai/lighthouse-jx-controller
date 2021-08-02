@@ -2,9 +2,11 @@
 rwildcard=$(wildcard $1$2) $(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2))
 
 SHELL := /bin/bash
-PROJECT := github.com/jenkins-x/lighthouse-jx-controller
+PROJECT := github.com/olli-ai/lighthouse-jx-controller
 JXCONTROLLER_EXECUTABLE := lighthouse-jx-controller
-DOCKER_REGISTRY := jenkinsxio
+DOCKER_REGISTRY := docker.jenkins-x-viettel.iviet.com
+DOCKER_IMAGE_NAME := lighthouse-jx-controller
+DOCKER_TAG := dev
 JXCONTROLLER_MAIN_SRC_FILE=cmd/jxcontroller/main.go
 GO := GO111MODULE=on go
 GO_NOMOD := GO111MODULE=off go
@@ -87,10 +89,10 @@ container:
 	docker-compose build $(DOCKER_IMAGE_NAME)
 
 .PHONY: production-container
-production-container:
-	docker build --rm -t $(DOCKER_REGISTRY)/$(DOCKER_IMAGE_NAME) .
+production-container: build-jx-controller-linux
+	docker build --rm -t $(DOCKER_REGISTRY)/$(DOCKER_IMAGE_NAME):$(DOCKER_TAG) .
 
 .PHONY: push-container
 push-container: production-container
-	docker push $(DOCKER_REGISTRY)/$(DOCKER_IMAGE_NAME)
+	docker push $(DOCKER_REGISTRY)/$(DOCKER_IMAGE_NAME):$(DOCKER_TAG)
 

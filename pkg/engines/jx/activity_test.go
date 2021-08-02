@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	v1 "github.com/jenkins-x/jx-api/pkg/apis/jenkins.io/v1"
-	"github.com/jenkins-x/lighthouse-jx-controller/pkg/engines/jx"
+	"github.com/olli-ai/lighthouse-jx-controller/pkg/engines/jx"
 	"github.com/jenkins-x/lighthouse/pkg/apis/lighthouse/v1alpha1"
 	"github.com/jenkins-x/lighthouse/pkg/util"
 	"github.com/stretchr/testify/assert"

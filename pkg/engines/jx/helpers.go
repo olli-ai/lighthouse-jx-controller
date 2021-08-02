@@ -5,8 +5,8 @@ import (
 	"os"
 
 	jxclient "github.com/jenkins-x/jx-api/pkg/client/clientset/versioned"
-	"github.com/jenkins-x/jx/v2/pkg/tekton/metapipeline"
-	"github.com/jenkins-x/jx/v2/pkg/util"
+	"github.com/olli-ai/jx/v2/pkg/tekton/metapipeline"
+	"github.com/olli-ai/jx/v2/pkg/util"
 	clientset "github.com/jenkins-x/lighthouse/pkg/client/clientset/versioned"
 	"github.com/jenkins-x/lighthouse/pkg/clients"
 	"github.com/pkg/errors"

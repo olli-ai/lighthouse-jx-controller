@@ -1,10 +1,10 @@
-module github.com/jenkins-x/lighthouse-jx-controller
+module github.com/olli-ai/lighthouse-jx-controller
 
 require (
 	github.com/google/go-cmp v0.4.1
 	github.com/jenkins-x/jx-api v0.0.13
-	github.com/jenkins-x/jx/v2 v2.1.150
 	github.com/jenkins-x/lighthouse v0.0.843
+	github.com/olli-ai/jx/v2 v2.0.400-0.20210802034400-c6d4d2b7f9e4
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.6.0
 	github.com/stretchr/testify v1.6.1

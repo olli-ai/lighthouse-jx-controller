@@ -5,7 +5,7 @@ import (
 	"os"
 
 	jxv1 "github.com/jenkins-x/jx-api/pkg/apis/jenkins.io/v1"
-	jxengine "github.com/jenkins-x/lighthouse-jx-controller/pkg/engines/jx"
+	jxengine "github.com/olli-ai/lighthouse-jx-controller/pkg/engines/jx"
 	lighthousev1alpha1 "github.com/jenkins-x/lighthouse/pkg/apis/lighthouse/v1alpha1"
 	"github.com/jenkins-x/lighthouse/pkg/clients"
 	"github.com/jenkins-x/lighthouse/pkg/interrupts"

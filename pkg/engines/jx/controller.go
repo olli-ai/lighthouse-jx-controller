@@ -8,7 +8,7 @@ import (
 	"text/template"
 
 	jxv1 "github.com/jenkins-x/jx-api/pkg/apis/jenkins.io/v1"
-	"github.com/jenkins-x/jx/v2/pkg/tekton/metapipeline"
+	"github.com/olli-ai/jx/v2/pkg/tekton/metapipeline"
 	lighthousev1alpha1 "github.com/jenkins-x/lighthouse/pkg/apis/lighthouse/v1alpha1"
 	configjob "github.com/jenkins-x/lighthouse/pkg/config/job"
 	"github.com/jenkins-x/lighthouse/pkg/util"
@@ -189,7 +189,7 @@ func (r *LighthouseJobReconciler) Reconcile(req ctrl.Request) (ctrl.Result, erro
 				PullRef:      pullRefData,
 				PipelineKind: kind,
 				Context:      job.Spec.Context,
-				// No equivalent to https://github.com/jenkins-x/jx/blob/bb59278c2707e0e99b3c24be926745c324824388/pkg/cmd/controller/pipeline/pipelinerunner_controller.go#L236
+				// No equivalent to https://github.com/olli-ai/jx/blob/bb59278c2707e0e99b3c24be926745c324824388/pkg/cmd/controller/pipeline/pipelinerunner_controller.go#L236
 				//   for getting environment variables from the prow job here, so far as I can tell (abayer)
 				// Also not finding an equivalent to labels from the PipelineRunRequest
 				ServiceAccount: sa,
